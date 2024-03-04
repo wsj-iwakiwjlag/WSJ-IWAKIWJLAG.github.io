@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-03-03
+                    2024-03-04
                 </div>
                 
 
@@ -464,40 +464,263 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h1><p>1.对新学期各个学科做了一些了解与规划</p>
-<h1 id="学习日历"><a href="#学习日历" class="headerlink" title="学习日历"></a>学习日历</h1><table>
+                <h1 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h1><p>HTML：超文本标签(标记)语言</p>
+<p>功能：通过HTML标签对网页的文本，图像，声音等内容进行描述，而且文本中还包含了超链接，可以将网站，网页和各个网页元素链接起来，构成丰富的网站</p>
+<h1 id="HTML的基本格式"><a href="#HTML的基本格式" class="headerlink" title="HTML的基本格式"></a>HTML的基本格式</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>无标题文档<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title="&lt;!DOCTYPE&gt;"></a>&lt;!DOCTYPE&gt;</h2><p>位置：文档最前面</p>
+<p>作用：说明当前文档使用那种HTML或XHTML标准的规范。</p>
+<h2 id="根标签"><a href="#根标签" class="headerlink" title="&lt;html&gt; 根标签"></a>&lt;html&gt; 根标签</h2><p>位置：&lt;!DOCTYPE&gt;之后</p>
+<p>作用：告诉浏览器器自身是一个HTML文档，包裹着文档内容</p>
+<p>结构：<code>&lt;html&gt; &lt;/html&gt;</code></p>
+<h2 id="头部标签"><a href="#头部标签" class="headerlink" title="&lt;head&gt;头部标签"></a>&lt;head&gt;头部标签</h2><p>位置：紧跟&lt;html&gt;之后</p>
+<p>作用：封装其他头部的标签</p>
+<p>结构：<code>&lt;head&gt;&lt;/head&gt;</code></p>
+<h2 id="主体标签"><a href="#主体标签" class="headerlink" title="&lt;body&gt;主体标签"></a>&lt;body&gt;主体标签</h2><p>位置：与&lt;head&gt;并列</p>
+<p>作用：浏览器中所有的文本图像，音频和视频等都位于此。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>放在&lt;&gt;内，表示某个功能的编码命令</p>
+<h2 id="1-标签的分类"><a href="#1-标签的分类" class="headerlink" title="1.标签的分类"></a>1.标签的分类</h2><h3 id="双标签-体标签"><a href="#双标签-体标签" class="headerlink" title="双标签(体标签)"></a>双标签(体标签)</h3><p>由开始和结束两个标签符号组成</p>
+<p>结构：<code>&lt;标签名&gt;内容&lt;/标签名&gt;</code></p>
+<h3 id="单标签-空标签"><a href="#单标签-空标签" class="headerlink" title="单标签(空标签)"></a>单标签(空标签)</h3><p>只用一个标签符</p>
+<p>结构：&lt;标签名 &#x2F;&gt;</p>
+<p>如：注释标签：</p>
+<p><code>&lt;!-- 这是一个注释 --&gt;</code></p>
+<p>注释标签内容会背浏览器忽略</p>
+<h2 id="2-标签关系"><a href="#2-标签关系" class="headerlink" title="2.标签关系"></a>2.标签关系</h2><h3 id="嵌套关系（包含关系）"><a href="#嵌套关系（包含关系）" class="headerlink" title="嵌套关系（包含关系）"></a>嵌套关系（包含关系）</h3><p>一个标签里包含其他标签</p>
+<h3 id="并列关系（兄弟关系）"><a href="#并列关系（兄弟关系）" class="headerlink" title="并列关系（兄弟关系）"></a>并列关系（兄弟关系）</h3><p>两个标签处于同一级</p>
+<h2 id="3-标签属性"><a href="#3-标签属性" class="headerlink" title="3.标签属性"></a>3.标签属性</h2><p>作用：使标签提供更多的信息。如颜色，位置等</p>
+<p>结构：<code>&lt;标签名 属性1=&quot;属性值1&quot; 属性2=&quot;属性值2&quot;&gt; 内容&lt;/标签名&gt;</code></p>
+<p>注：多个属性之前用<strong>空格</strong>分开.</p>
+<h2 id="3-页面格式化标签"><a href="#3-页面格式化标签" class="headerlink" title="3.页面格式化标签"></a>3.页面格式化标签</h2><p>作用：使文章的结构清晰</p>
+<p>位置：以下标签都位于主体<code>&lt;boby&gt;&lt;/boby&gt;</code>中</p>
+<h3 id="1-标题标签"><a href="#1-标题标签" class="headerlink" title="1.标题标签"></a>1.标题标签</h3><p>作用：使网页具有语义化（语义化：赋予普通网页文本特殊的含义)</p>
+<p>结构：<code>&lt;hn align=&quot;对齐格式&quot;&gt;标题文本&lt;/hn&gt;</code></p>
+<p>n:取值为：1到6：代表1到6个等级的标题。</p>
+<p>align：可选属性，指定对齐方向（默认为左，left：左，centre：中，right：右)</p>
+<p>注：</p>
+<p>1.浏览器会自动地在标题前后添加空行</p>
+<p>2.标题很重要，搜索引擎会使用标题为你的网页的结构和内容编辑索引，所以<code>&lt;h1&gt;</code>标签常作为网站的logo</p>
+<h3 id="2-段落标签"><a href="#2-段落标签" class="headerlink" title="2.段落标签"></a>2.段落标签</h3><p>作用：定义段落</p>
+<p>结构：<code>&lt;p align=&quot;对齐方式&quot;&gt; &lt;/p&gt;</code></p>
+<h3 id="3-水平线标签"><a href="#3-水平线标签" class="headerlink" title="3.水平线标签"></a>3.水平线标签</h3><p>作用：将段落与段落隔开</p>
+<p>结构：<code>&lt;hr 属性=&quot;属性值&quot;/&gt;</code></p>
+<p>hr常用属性表：</p>
+<table>
 <thead>
 <tr>
-<th align="left">2.26</th>
-<th align="left">复习高数上知识点，</th>
+<th align="left">属性名</th>
+<th align="left">含义</th>
+<th align="left">属性值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">2.27</td>
-<td align="left">整理新学课学习思路，</td>
+<td align="left">align</td>
+<td align="left">对齐方式</td>
+<td align="left">默认：中，left：左，centre：中，right：右</td>
 </tr>
 <tr>
-<td align="left">2.28</td>
-<td align="left">学习‘学习通’选课：大学启示录</td>
+<td align="left">size:</td>
+<td align="left">粗细</td>
+<td align="left">以像素为单位，默认为2</td>
 </tr>
 <tr>
-<td align="left">2.29</td>
-<td align="left">刷c语言基础概念的题目</td>
+<td align="left">color</td>
+<td align="left">颜色</td>
+<td align="left">可用颜色英文名称</td>
 </tr>
 <tr>
-<td align="left">3.1</td>
-<td align="left">处理作业</td>
-</tr>
-<tr>
-<td align="left">.3.2</td>
-<td align="left">刷学习通选课课程</td>
-</tr>
-<tr>
-<td align="left">3.3</td>
-<td align="left">尝试构建一个纯文本网页</td>
+<td align="left">width</td>
+<td align="left">宽度</td>
+<td align="left">确定的像素值或浏览器窗口的百分比，默认100%</td>
 </tr>
 </tbody></table>
-<h1 id="本周收获"><a href="#本周收获" class="headerlink" title="本周收获"></a>本周收获</h1><p>对这学期的学科有了大致的了解，特别是对c语言等程序语言，最后都要运用与实践，要注重运用，多做项目。此外，自主学习很重要，周末我就定创建一个网页的目标，但是我高估了自己，只完成了关于文本和一部分CSS的笔记，距离目标还有很长的路要走，下周继续吧。</p>
+<h3 id="4-换行标签"><a href="#4-换行标签" class="headerlink" title="4.换行标签"></a>4.换行标签</h3><p>作用：强制换行</p>
+<p>结构：<code>&lt;br/&gt;</code></p>
+<h2 id="文档头相关标签"><a href="#文档头相关标签" class="headerlink" title="文档头相关标签"></a>文档头相关标签</h2><p>作用：设置页面的基本信息，如：页面的标题，作者等</p>
+<h3 id="1-页面标题标签"><a href="#1-页面标题标签" class="headerlink" title="1.页面标题标签&lt;title&gt;"></a>1.页面标题标签&lt;title&gt;</h3><p>作用：给页面取一个名字</p>
+<p>结构：<code>&lt;title&gt;轻松学习&lt;/title&gt;</code></p>
+<h3 id="2-定义页面原信息标签"><a href="#2-定义页面原信息标签" class="headerlink" title="2.定义页面原信息标签&lt;meta &#x2F;&gt;"></a>2.定义页面原信息标签&lt;meta &#x2F;&gt;</h3><p>作用：定义元数据（关于数据的数据），不显示但可以被机器解析</p>
+<p>常用于：指定字符集，页面描述，关键字，文档作者和视口设置浏览器（如何显示内容或重新加载页面)，搜索引（关键词）和其他网络服务会用到元数据</p>
+<p>结构：<code>&lt;meta 属性=&quot;属性内容&quot;/&gt;</code></p>
+<p>常用设置：</p>
+<p>.一。<code>&lt;meta name=&quot;名称&quot; content=&quot;值&quot;/&gt;</code></p>
+<p>name:提供搜索内容的名称</p>
+<p>content：对应的搜索内容值</p>
+<p>用法：</p>
+<p>1.设置网页关键字&#x20;</p>
+<p>例如：<code>&lt;meta name=&quot;keywords&quot; content=&quot;信息&quot;/&gt;</code></p>
+<p>2.设置网页描述 name&#x3D;”description</p>
+<p>3.设置网页作者 name&#x3D;”author”</p>
+<p>二。<code>&lt;meat http-equiv=&quot;名称&quot; content=&quot;值&quot;/&gt;</code></p>
+<p>http-equiv:属性提供参数类型</p>
+<p>content：属性提供对应的参数值</p>
+<p>用法：</p>
+<p>设置页面自动刷新与跳转</p>
+<p>例如：定义某个网页10秒后跳转至百度</p>
+<p>&lt;meta http-equiv&#x3D;”refresh” content&#x3D;”10;ur1&#x3D;<a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com/</a>“&gt;</p>
+<h2 id="3-文本样式标签"><a href="#3-文本样式标签" class="headerlink" title="3.文本样式标签"></a>3.文本样式标签</h2><p>作用：用于设置文字的效果（如：字体，加粗，颜色）</p>
+<p>结构：&lt;font 属性&#x3D;”属性值”&gt;文本内容&lt;&#x2F;font&gt;</p>
+<p>位置：<code>&lt;p&gt;&lt;/p&gt;</code>之间</p>
+<p>常用属性</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>face</td>
+<td>设置字体，例如黑体，宋体</td>
+</tr>
+<tr>
+<td>size</td>
+<td>设置字体的大小，可以取1~7之间的整数值</td>
+</tr>
+<tr>
+<td>color</td>
+<td>设置字体的颜色,用英文标识，如red：红色</td>
+</tr>
+</tbody></table>
+<h2 id="4-文本格式化标签"><a href="#4-文本格式化标签" class="headerlink" title="4.文本格式化标签"></a>4.文本格式化标签</h2><p>位置：放在<code>&lt;p&gt;&lt;/p&gt;</code>之间</p>
+<p>常用的文本格式化标签</p>
+<table>
+<thead>
+<tr>
+<th align="left">标签</th>
+<th align="left">显示效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;b&gt;&lt;&#x2F;b&gt;和&lt;strong&gt;&lt;&#x2F;strong&gt;</td>
+<td align="left">文字加粗</td>
+</tr>
+<tr>
+<td align="left">&lt;u&gt;&lt;&#x2F;u&gt;和&lt;ins&gt;&lt;&#x2F;ins&gt;</td>
+<td align="left">文字加下画线</td>
+</tr>
+<tr>
+<td align="left">&lt;i&gt;&lt;&#x2F;i&gt;和&lt;em&gt;&lt;&#x2F;em&gt;</td>
+<td align="left">文字斜体</td>
+</tr>
+<tr>
+<td align="left">&lt;s&gt;&lt;&#x2F;s&gt;和&lt;del&gt;&lt;&#x2F;del&gt;</td>
+<td align="left">文字加删除线</td>
+</tr>
+</tbody></table>
+<h2 id="图像标签"><a href="#图像标签" class="headerlink" title="图像标签"></a>图像标签</h2><h3 id="图像格式"><a href="#图像格式" class="headerlink" title="图像格式"></a>图像格式</h3><p>1.GIF格式：图形交换格式</p>
+<p>特点：1.<code>动画</code>，2.透明背景，3.图形渐进（使图片渐渐显示在屏幕上），4.无损压缩（适合线条，图标和图纸）</p>
+<p>2.PNG格式：包括PNG-8和真色彩（PNG-32)</p>
+<p>特点：1.静态，2.支持Alpha透明(全，半，全不透明)，3.<code>体积小</code>。4</p>
+<p>3.JPG格式：</p>
+<p>特点：1.有损压缩，2.<code>色彩丰富</code></p>
+<h3 id="图像标签-1"><a href="#图像标签-1" class="headerlink" title="图像标签&lt;img&#x2F;&gt;"></a>图像标签&lt;img&#x2F;&gt;</h3><p>结构：<code>&lt;img src=&quot;图像URL&quot;/&gt;</code></p>
+<p>src：只图像文件的路径和文件名，必备属性</p>
+<h4 id="标签的常用属性"><a href="#标签的常用属性" class="headerlink" title="&lt;img &#x2F;&gt;标签的常用属性"></a>&lt;img &#x2F;&gt;标签的常用属性</h4><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">属性值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">sir</td>
+<td align="left">URL</td>
+<td align="left">图像的路径</td>
+</tr>
+<tr>
+<td align="left">alt</td>
+<td align="left">文本</td>
+<td align="left">图形不能显示使的替换文本</td>
+</tr>
+<tr>
+<td align="left">title</td>
+<td align="left">文本</td>
+<td align="left">鼠标指针悬停时显示的内容</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">像素值</td>
+<td align="left">图像的宽度</td>
+</tr>
+<tr>
+<td align="left">height</td>
+<td align="left">像素值</td>
+<td align="left">图像的高度</td>
+</tr>
+<tr>
+<td align="left">border</td>
+<td align="left">数字</td>
+<td align="left">图像边框的宽度</td>
+</tr>
+<tr>
+<td align="left">vspace</td>
+<td align="left">像素值</td>
+<td align="left">图像顶部和底部的空白（垂直边框）</td>
+</tr>
+<tr>
+<td align="left">hspace</td>
+<td align="left">像素值</td>
+<td align="left">图形左侧和右侧的空白（水平边框）</td>
+</tr>
+<tr>
+<td align="left">align</td>
+<td align="left">“left” “right” “top” “middle” “middle” “bottom”</td>
+<td align="left">对齐左边；对齐右边；图像<code>顶端</code>与文本第一行对齐其他文字居图像下发；图像的<code>水平中线</code>与文本第一行文字对齐，其他文字居图像下方；图形<code>底部</code>与文本第一行对齐，其他文字居图像下方。</td>
+</tr>
+</tbody></table>
+<h3 id="图像的路径（相对和绝对）"><a href="#图像的路径（相对和绝对）" class="headerlink" title="图像的路径（相对和绝对）"></a>图像的路径（相对和绝对）</h3><p>1.绝对路径：网页的文件目录所在硬盘上的真正路径</p>
+<p>2.相对路径：相对于当前文件的路径，有以下三种情况</p>
+<ol>
+<li>图像文件和HTML文件在同一文件夹：只需输入图像文件的名称。如：&lt;img src&#x3D;”logo.gif”&#x2F;&gt;</li>
+<li>图像文件位于HTML文件的下一级文件：输入文件名和文件夹名，之间用”&#x2F;“隔开。</li>
+<li>图像文件位于HTML文件的上一级文件夹：在文件名前加入”..&#x2F;“,如果是上两级，则”..&#x2F;..&#x2F;“，以此类推。如：&lt;img src&#x3D;”..&#x2F;logo.gif”&#x2F;&gt;</li>
+</ol>
+<p>注：<strong>网页中不推荐使用绝对路径</strong></p>
+<h2 id="特殊字符标签"><a href="#特殊字符标签" class="headerlink" title="特殊字符标签"></a>特殊字符标签</h2><p>数学公式，版权信息等包含特殊字符的文本</p>
+<p>使用方式：直接在文本中输入即可自动替换</p>
+<p>常用特殊字符表格</p>
+<table>
+<thead>
+<tr>
+<th align="left">特殊字符</th>
+<th align="left">描述</th>
+<th align="left">字符代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"></td>
+<td align="left">空格符</td>
+<td align="left">&amp;nbsp;</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">小于号</td>
+<td align="left">&amp;lt;</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">大于号</td>
+<td align="left">&amp;gt;</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">和号</td>
+<td align="left">&amp;amp;</td>
+</tr>
+<tr>
+<td align="left">￥</td>
+<td align="left">人民币</td>
+<td align="left">&amp;yen;</td>
+</tr>
+<tr>
+<td align="left">x</td>
+<td align="left">称号</td>
+<td align="left">&amp;times</td>
+</tr>
+</tbody></table>
+<p>注：别忘记加”;”</p>
 
                 
             </div>
@@ -524,7 +747,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wsj-iwakiwjlag.github.io/2024/03/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%882.26-3.3%EF%BC%89/">https://wsj-iwakiwjlag.github.io/2024/03/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%882.26-3.3%EF%BC%89/</a>
+                    <a href="https://wsj-iwakiwjlag.github.io/2024/03/04/HTML/">https://wsj-iwakiwjlag.github.io/2024/03/04/HTML/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -729,9 +952,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2024/03/04/HTML/">
                     <div class="card-image">
@@ -749,9 +973,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -760,6 +984,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -770,7 +995,7 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/02/26/%E5%AF%92%E5%81%87%E5%91%A8%E6%8A%A5%EF%BC%88%E4%BA%94%EF%BC%89/">
+                <a href="/2024/03/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%882.26-3.3%EF%BC%89/">
                     <div class="card-image">
                         
                         
@@ -787,7 +1012,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-03
                             </span>
                         <span class="publish-author">
                             
