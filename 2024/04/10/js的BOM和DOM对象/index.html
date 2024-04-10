@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-04-07
+                    2024-04-10
                 </div>
                 
 
@@ -464,39 +464,85 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h1><p>继续学习竞赛知识并了解了Vue的一些基本用法</p>
-<h1 id="学习日历"><a href="#学习日历" class="headerlink" title="学习日历"></a>学习日历</h1><table>
-<thead>
-<tr>
-<th align="left">4.1</th>
-<th align="left">竞赛培训</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">4.2</td>
-<td align="left">刷竞赛视频</td>
-</tr>
-<tr>
-<td align="left">4.3</td>
-<td align="left">刷竞赛视频</td>
-</tr>
-<tr>
-<td align="left">4.4</td>
-<td align="left">出去玩了</td>
-</tr>
-<tr>
-<td align="left">4.5</td>
-<td align="left">了解Vue和其一些基本指令</td>
-</tr>
-<tr>
-<td align="left">4.6</td>
-<td align="left">完成一个Vue的简单案例</td>
-</tr>
-<tr>
-<td align="left">4.7</td>
-<td align="left">背单词，竞赛培训</td>
-</tr>
-</tbody></table>
+                <h1 id="内容预告"><a href="#内容预告" class="headerlink" title="内容预告"></a>内容预告</h1><p>众所周知，<em>要学java先有‘对象’，</em>对于万物皆对象的java而言，对象是不可或缺的。今天带大家了解一下JavaScript的BOM和DOM对象</p>
+<h2 id="学习前提："><a href="#学习前提：" class="headerlink" title="学习前提："></a>学习前提：</h2><p>至少知道JS的基础语法：如：书写语法，<strong>变量，函数，循环</strong>等</p>
+<h2 id="内容预览"><a href="#内容预览" class="headerlink" title="内容预览:"></a>内容预览:</h2><ol>
+<li>对BOM和DOM有一个初步的认知</li>
+<li>会使用BOM的window对象：<strong>弹出警告框，显示对话框，两种计时器的使用，</strong></li>
+<li>利用DOM<strong>获取元素对象</strong>，并能调用元素对象的属性或方法来<strong>操作HTML的元素和对象</strong></li>
+</ol>
+<h1 id="BOM部分"><a href="#BOM部分" class="headerlink" title="BOM部分"></a>BOM部分</h1><h2 id="BOM概念"><a href="#BOM概念" class="headerlink" title="BOM概念"></a>BOM概念</h2><p>概念：<strong>浏览器对象模型</strong>，允许JavaScript与浏览器对话（JavaScript会将浏览器各个部分封装为对象）即：<strong>将一个浏览器的各个组成部分封装成对象供调用使用。</strong></p>
+<p>组成：</p>
+<ol>
+<li>window：浏览器窗口对象</li>
+<li>Navigator：浏览器对象</li>
+<li>Screen：屏幕对象</li>
+<li>History：历史记录对象</li>
+<li>Location：地址栏对象</li>
+<li>Document：文档对象</li>
+</ol>
+<p><strong>主要介绍一下浏览器对像的一些常用方法</strong></p>
+<h2 id="Window对象的常用方法"><a href="#Window对象的常用方法" class="headerlink" title="Window对象的常用方法"></a>Window对象的常用方法</h2><p><strong>使用方法时：window可以省略</strong></p>
+<h3 id="1-弹出警告框alert"><a href="#1-弹出警告框alert" class="headerlink" title="1.弹出警告框alert"></a>1.弹出警告框<code>alert</code></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="variable language_">window</span>.<span class="title function_">alert</span>(<span class="string">&quot;Hello BOM&quot;</span>);</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&quot;Hello jie&quot;</span>);	</span><br><span class="line">	<span class="comment">//以上两种方法均可以弹出警告框</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-显示对话框confirm"><a href="#2-显示对话框confirm" class="headerlink" title="2.显示对话框confirm"></a>2.显示对话框<code>confirm</code></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> a = <span class="title function_">confirm</span>(<span class="string">&quot;你确认删除该记录吗？&quot;</span>)</span><br><span class="line"><span class="title function_">alert</span>(a);<span class="comment">//点击确认：a的返回值为：ture;点击取消：a的返回值为false</span></span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-定时器"><a href="#3-定时器" class="headerlink" title="3.定时器"></a>3.定时器</h3><ol>
+<li><p>周期性执行某一函数<code>setInterval(函数,时间)</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">var</span> i=<span class="number">0</span></span></span><br><span class="line"><span class="language-javascript"><span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">	i++;</span></span><br><span class="line"><span class="language-javascript">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;定时器执行力&quot;</span>+i+<span class="string">&quot;次&quot;</span>);<span class="comment">//在控制台中显示</span></span></span><br><span class="line"><span class="language-javascript">&#125;,<span class="number">2000</span>);<span class="comment">//间隔时间</span></span></span><br><span class="line"><span class="language-javascript"><span class="comment">//每隔2秒，在控制台中显示执行了&#x27;i&#x27;次</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>延迟指定时间执行某一函数<code>setTimeout(函数,时间)</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> i =<span class="number">0</span>;</span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="title function_">functon</span>(<span class="params"></span>)&#123;</span><br><span class="line">    i++;</span><br><span class="line">    <span class="title function_">confirm</span>(i)&#125;,<span class="number">3000</span>)</span><br><span class="line"><span class="comment">//3秒后弹出警告框</span></span><br><span class="line">&lt;/script?</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="DOM部分"><a href="#DOM部分" class="headerlink" title="DOM部分"></a>DOM部分</h1><h2 id="DOM概念"><a href="#DOM概念" class="headerlink" title="DOM概念"></a>DOM概念</h2><p>文档对象模型：将标记语言文档的各个组成部分，封装为对象。同时会在浏览器的内容中形成**DOM树。**如下图：<br><img src="https://www.w3school.com.cn/i/ct_htmltree.gif"></p>
+<p><strong>DOM的作用</strong>：</p>
+<p><strong>同过document对象获取HTML文档中的元素，并对其进行操作</strong>如：</p>
+<ol>
+<li>改变HTML元素的内容</li>
+<li>改变HTML元素的样式</li>
+<li>对HTML的DOM事件做出反应</li>
+<li>添加或删除HTML元素等</li>
+</ol>
+<p><strong>DOM的组成：</strong></p>
+<ol>
+<li>document：整个文档对象</li>
+<li>Element：元素对象（<strong>每一个元素对象都对于html或或XML文档中的一个标签。</strong>）</li>
+<li>Attribute：属性对象</li>
+<li>Text：文本对象</li>
+<li>Comment：注释对象</li>
+</ol>
+<h2 id="获取元素对象"><a href="#获取元素对象" class="headerlink" title="获取元素对象"></a>获取元素对象</h2><p>利用Document对象来获取Element</p>
+<p>具体方法：</p>
+<ol>
+<li><p>利用<strong>id</strong>属性值来获取，返回值为Element对象</p>
+<p><code>var img =documtent.getElementID(&#39;h1&#39;);</code></p>
+</li>
+<li><p>利用<strong>标签名</strong>来获取，返回值为Element对象<strong>数组</strong></p>
+<p><code>var divs =documtent.getElementsByTagName(&#39;div&#39;);</code></p>
+</li>
+<li><p>利用<strong>name属性值</strong>来获取，返回值为Element对象<strong>数组</strong></p>
+<p><code>var bodys =documtent.getElementsByName(&#39;body&#39;);</code></p>
+</li>
+<li><p>利用<strong>class属性值</strong>来获取，返回值为Element对象<strong>数组</strong></p>
+<p><code>var classes =documtent.getElementsByClassName(&#39;classes&#39;);</code></p>
+</li>
+</ol>
+<p>下面以一个示例来介绍：</p>
+<ol>
+<li><p>分别根据id，属性值来<strong>获取Element对象</strong></p>
+</li>
+<li><p>如何利用获取的Element对象,<strong>更改元素的属性</strong></p>
+<p>注：HTML的元素属性非常多，大家可以去官网查看</p>
+<ol>
+<li>官网为：<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/">w3school 在线教程</a></li>
+<li>查看方法：1.点击JavaScript，点击参考书，最终网站：<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jsref/index.asp">JavaScript 和 HTML DOM 参考手册 (w3school.com.cn)</a></li>
+<li>找到需要的标签，再到需要属性，根据提示更改</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">!<span class="variable constant_">DOCTYPE</span> html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;img id=&quot;h1&quot; src=&quot;https://ts1.cn.mm.bing.net/th/id/R-C.b3c68ef9de1109b0d020e22bc2aacf40?rik=H9R9l7dvJP9Kbw&amp;riu=http%3a%2f%2fpic.bizhi360.com%2fbbpic%2f89%2f8989.jpg&amp;ehk=VyIdtYriq3lSqrO3x0MHd5IyxYaw8jZUCKZbHNtvewU%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&quot; height=&quot;300&quot;,text-align:right&gt;</span><br><span class="line">//导入了一个图片，我用的是网络路径，可以无脑复制，不会报错</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;cls&quot;&gt;666&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;cls&quot;&gt;999&lt;/div&gt;</span><br><span class="line">//定义了两个简单的区块</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">//获取元素-根据id获取</span><br><span class="line">var img = document.getElementById(&quot;h1&quot;);  //获取</span><br><span class="line">    alert(img)  //返回值为：[object HTMLImageElement]</span><br><span class="line">//获取元素-根据标签 - div--&gt;返回值是一个数组</span><br><span class="line">var divs = document.getElementsByTagName(&quot;div&quot;)  //获取</span><br><span class="line">    for (let index = 0; index &lt; divs.length; index++) &#123;  </span><br><span class="line">    alert(divs[index]);&#125;  //输出，检验是否成功获取</span><br><span class="line"></span><br><span class="line">//实例1：利用获得的img对应的Element对像，更改图片的src属性</span><br><span class="line">var img = document.getElementById(&quot;h1&quot;);</span><br><span class="line">img.src =&quot;https://pic.rmb.bdstatic.com/bjh/914b8c0f9814b14c5fedeec7ec6615df5813.jpeg&quot;</span><br><span class="line">//实例2.将所有的div标签的内容后面加前：爱坤</span><br><span class="line">var divs = document.getElementsByTagName(&#x27;div&#x27;)</span><br><span class="line">    for (let index = 0; index &lt; divs.length; index++) &#123;</span><br><span class="line">        const div = divs[index];  //此处是一个改名操作，可以不改，直接用divs[index]</span><br><span class="line">		div.innerHTML = &quot;爱坤&quot;+div.innerHTML;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>完结，撒花，恭喜你已经初步认识了JavaScript的BOM和DOM对象</p>
+<p>本篇内容借鉴于：黑马程序员javaweb开发教程</p>
 
                 
             </div>
@@ -523,7 +569,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wsj-iwakiwjlag.github.io/2024/04/07/%E7%AC%AC%E5%85%AD%E5%91%A8/">https://wsj-iwakiwjlag.github.io/2024/04/07/%E7%AC%AC%E5%85%AD%E5%91%A8/</a>
+                    <a href="https://wsj-iwakiwjlag.github.io/2024/04/10/js%E7%9A%84BOM%E5%92%8CDOM%E5%AF%B9%E8%B1%A1/">https://wsj-iwakiwjlag.github.io/2024/04/10/js%E7%9A%84BOM%E5%92%8CDOM%E5%AF%B9%E8%B1%A1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -728,9 +774,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2024/04/10/js%E7%9A%84BOM%E5%92%8CDOM%E5%AF%B9%E8%B1%A1/">
                     <div class="card-image">
@@ -748,9 +795,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -759,6 +806,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -769,7 +817,7 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/03/31/%E7%AC%AC5%E5%91%A8%EF%BC%88%E6%94%B9%EF%BC%89/">
+                <a href="/2024/04/07/%E7%AC%AC%E5%85%AD%E5%91%A8/">
                     <div class="card-image">
                         
                         
@@ -786,7 +834,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-07
                             </span>
                         <span class="publish-author">
                             
