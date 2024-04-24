@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-04-20
+                    2024-04-24
                 </div>
                 
 
@@ -464,39 +464,75 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h1><p>AI办公竞赛＋新的大创项目+英语学习</p>
-<h1 id="学习日历"><a href="#学习日历" class="headerlink" title="学习日历"></a>学习日历</h1><table>
-<thead>
-<tr>
-<th align="left">4.8</th>
-<th align="left">背单词，竞赛培训</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">4.9</td>
-<td align="left">竞赛培训</td>
-</tr>
-<tr>
-<td align="left">4.10</td>
-<td align="left">整理了DOM和Vue</td>
-</tr>
-<tr>
-<td align="left">4.11</td>
-<td align="left">竞赛培训</td>
-</tr>
-<tr>
-<td align="left">4.12</td>
-<td align="left">补作业</td>
-</tr>
-<tr>
-<td align="left">4.13</td>
-<td align="left">搜集了一些项目的资料，了解了一下机械学习</td>
-</tr>
-<tr>
-<td align="left">4.14</td>
-<td align="left">写互联网＋项目报名表，ai培训</td>
-</tr>
-</tbody></table>
+                <h1 id="1-内置排序函数"><a href="#1-内置排序函数" class="headerlink" title="1.内置排序函数"></a>1.<strong>内置排序函数</strong></h1><p>Python的内置函数<code>sorted()</code>和列表的<code>sort()</code>方法是最简单的排序方式。</p>
+<ul>
+<li><code>sorted()</code>函数返回一个新的排序列表，原列表保持不变。</li>
+<li><code>sort()</code>方法直接在原列表上进行排序，不返回新列表。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">9</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">5</span>]  </span><br><span class="line">sorted_numbers = <span class="built_in">sorted</span>(numbers)  </span><br><span class="line"><span class="built_in">print</span>(sorted_numbers)  <span class="comment"># 输出: [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]  </span></span><br><span class="line">  </span><br><span class="line">numbers.sort()  </span><br><span class="line"><span class="built_in">print</span>(numbers)  <span class="comment"># 输出: [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2-自定义排序逻辑"><a href="#2-自定义排序逻辑" class="headerlink" title="2.自定义排序逻辑"></a>2.<strong>自定义排序逻辑</strong></h1><p>在Python中，自定义排序逻辑通常通过<code>sorted()</code>函数或列表的<code>sort()</code>方法的<code>key</code>参数来实现。<code>key</code>参数接受一个函数，这个函数会被应用到序列的每个元素上，然后返回的结果将被用来进行比较排序。这个函数通常被称为“键函数”（key function）。</p>
+<p>下面是一些使用自定义排序逻辑的示例：</p>
+<h3 id="示例一：根据对象的属性排序"><a href="#示例一：根据对象的属性排序" class="headerlink" title="示例一：根据对象的属性排序"></a>示例一：根据对象的属性排序</h3><p>假设你有一个自定义类的实例列表，并且你想要根据对象的某个属性来排序这些实例。你可以通过定义一个键函数来实现这一点。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:  </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age</span>):  </span><br><span class="line">        self.name = name  </span><br><span class="line">        self.age = age  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 创建一个Person对象列表  </span></span><br><span class="line">people = [Person(<span class="string">&#x27;Alice&#x27;</span>, <span class="number">25</span>), Person(<span class="string">&#x27;Bob&#x27;</span>, <span class="number">20</span>), Person(<span class="string">&#x27;Charlie&#x27;</span>, <span class="number">23</span>)]  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 使用sorted()函数和自定义键函数对年龄这个属性进行进行排序  </span></span><br><span class="line">sorted_people = <span class="built_in">sorted</span>(people, key=<span class="keyword">lambda</span> person: person.age)  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 输出排序后的人员列表  </span></span><br><span class="line"><span class="keyword">for</span> person <span class="keyword">in</span> sorted_people:  </span><br><span class="line">    <span class="built_in">print</span>(person.name, person.age)</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，<code>lambda person: person.age</code>是一个键函数，它接受一个<code>Person</code>对象并返回其<code>age</code>属性。<code>sorted()</code>函数使用这个键函数的结果来对<code>people</code>列表进行排序。</p>
+<h3 id="示例二：根据复杂条件排序"><a href="#示例二：根据复杂条件排序" class="headerlink" title="示例二：根据复杂条件排序"></a>示例二：根据复杂条件排序</h3><p>有时你可能需要根据多个条件或更复杂的逻辑来进行排序。你可以通过在键函数中实现这些逻辑来实现这一点。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 假设你有一个字典列表，每个字典代表一个学生，包含&#x27;name&#x27;和&#x27;score&#x27;两个键  </span></span><br><span class="line">students = [&#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;score&#x27;</span>: <span class="number">90</span>&#125;, &#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;score&#x27;</span>: <span class="number">85</span>&#125;, &#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;Charlie&#x27;</span>, <span class="string">&#x27;score&#x27;</span>: <span class="number">90</span>&#125;]  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 你想要首先按照分数从高到低排序，如果分数相同则按照名字字母顺序排序  </span></span><br><span class="line">sorted_students = <span class="built_in">sorted</span>(students, key=<span class="keyword">lambda</span> student: (-student[<span class="string">&#x27;score&#x27;</span>], student[<span class="string">&#x27;name&#x27;</span>]))  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 输出排序后的学生列表  </span></span><br><span class="line"><span class="keyword">for</span> student <span class="keyword">in</span> sorted_students:  </span><br><span class="line">    <span class="built_in">print</span>(student[<span class="string">&#x27;name&#x27;</span>], student[<span class="string">&#x27;score&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，键函数返回一个元组，元组的第一个元素是负数的分数（为了实现降序排序），第二个元素是名字。Python在比较元组时会按照元组的元素顺序进行比较，因此首先比较分数，如果分数相同则比较名字。</p>
+<h1 id="3-排序算法实现"><a href="#3-排序算法实现" class="headerlink" title="3.排序算法实现"></a>3.<strong>排序算法实现</strong></h1><p>Python允许你实现自己的排序算法，如冒泡排序、选择排序、插入排序、归并排序、快速排序等。这些算法不仅有助于深入理解排序的原理，还可以在某些特定场景下提供性能优化。</p>
+<h3 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1. 冒泡排序"></a><strong>1. 冒泡排序</strong></h3><p><strong>原理</strong>：通过相邻元素之间的比较和交换，使得每一趟排序后，最大（或最小）的元素被交换到序列的一端。</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>从第一个元素开始，比较相邻的两个元素。如果前一个元素比后一个元素大（升序排序），则交换它们的位置。</li>
+<li>对每一对相邻元素做同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+</ol>
+<p><strong>特点</strong>：冒泡排序简单易懂，但效率较低，特别是对于大数据集。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">maopao</span>(<span class="params">a</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(a)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n-i-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> a[j] &gt; a[j+<span class="number">1</span>]:</span><br><span class="line">                a[j],a[j+<span class="number">1</span>] = a[j+<span class="number">1</span>],a[j]</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line">a = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br><span class="line"><span class="built_in">print</span>(maopao(a))</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2. 选择排序"></a><strong>2. 选择排序</strong></h2><p><strong>原理</strong>：每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。</li>
+<li>再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。</li>
+<li>重复第二步，直到所有元素均排序完毕。</li>
+</ol>
+<p><strong>特点</strong>：选择排序是不稳定的排序方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">xuanze</span>(<span class="params">a</span>):</span><br><span class="line">    n=<span class="built_in">len</span>(a)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>):</span><br><span class="line">        <span class="comment">#第i次从[i,n-1]找最小值</span></span><br><span class="line">        min_value = a[i]</span><br><span class="line">        <span class="built_in">min</span> = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i,n):</span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;min_value):</span><br><span class="line">                min_value=a[j]</span><br><span class="line">                <span class="built_in">min</span> = j</span><br><span class="line">        <span class="comment">#将最小值和最前面的元素交换</span></span><br><span class="line">        a[<span class="built_in">min</span>],a[i] = a[i],a[<span class="built_in">min</span>]</span><br><span class="line">    <span class="keyword">return</span> a</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-插入排序"><a href="#3-插入排序" class="headerlink" title="3.插入排序"></a>3.插入排序</h1><p><strong>原理</strong>：通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>从第一个元素开始，该元素可以认为已经被排序。</li>
+<li>取出下一个元素，在已经排序的元素序列中从后向前扫描。</li>
+<li>如果该元素（已排序）大于新元素，将该元素移到下一位置。</li>
+<li>重复步骤3，直到找到已排序的元素小于或者等于新元素的位置。</li>
+<li>将新元素插入到该位置后。</li>
+<li>重复步骤2~5。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">charu</span>(<span class="params">arr</span>):  </span><br><span class="line">    <span class="comment"># 遍历从1到列表长度的所有元素  </span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(arr)):  </span><br><span class="line">        <span class="comment"># 当前需要排序的元素  </span></span><br><span class="line">        key = arr[i]  </span><br><span class="line">        <span class="comment"># j是已排序序列的最后一个元素的索引  </span></span><br><span class="line">        j = i - <span class="number">1</span>  </span><br><span class="line">        <span class="comment"># 将大于key的元素后移  </span></span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span> <span class="keyword">and</span> key &lt; arr[j]:  </span><br><span class="line">            arr[j + <span class="number">1</span>] = arr[j]  </span><br><span class="line">            j -= <span class="number">1</span>  </span><br><span class="line">        <span class="comment"># 找到key的插入位置，插入key  </span></span><br><span class="line">        arr[j + <span class="number">1</span>] = key  </span><br><span class="line">    <span class="keyword">return</span> arr  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 示例  </span></span><br><span class="line">arr = [<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>]  </span><br><span class="line">sorted_arr = charu(arr)  </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;排序后的数组:&quot;</span>, sorted_arr)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-归并排序"><a href="#4-归并排序" class="headerlink" title="4. 归并排序"></a><strong>4. 归并排序</strong></h3><p><strong>原理</strong>：将数组拆分为子数组，先使每个子序列有序，在将子数组合并</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>分解：将数组分解成两个较小的子数组，直到子数组的大小为1。</li>
+<li>递归进行排序并合并：递归地对子数组进行排序，并将已排序的子数组合并成一个大的有序数组，直到合并为1个完整的数组。</li>
+</ol>
+<p><strong>特点</strong>：归并排序是稳定的排序方法，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">mix</span>(<span class="params">A,B</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    递归</span></span><br><span class="line"><span class="string">    :param A: 有序列表</span></span><br><span class="line"><span class="string">    :param B: 有序列表</span></span><br><span class="line"><span class="string">    :return: A与B合并的有序列表</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(A) != <span class="number">0</span> <span class="keyword">and</span> <span class="built_in">len</span>(B) != <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># A与B比较，将小的放到新列表中，并将放过的数去除</span></span><br><span class="line">        <span class="keyword">if</span> A[<span class="number">0</span>] &lt;= B[<span class="number">0</span>]:</span><br><span class="line">            result.append(A.pop(<span class="number">0</span>))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result.append(B.pop(<span class="number">0</span>))</span><br><span class="line">    <span class="comment"># 最后在末尾加上非0列表的剩余部分</span></span><br><span class="line">    result.extend(A)</span><br><span class="line">    result.extend(B)</span><br><span class="line">    <span class="keyword">return</span>  result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fen</span>(<span class="params">A</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    先将一个大列表进行拆分，两个小列表，然后再对左边的小列表拆分，这样重复一直拆分</span></span><br><span class="line"><span class="string">    直到mid&lt;2也就是：左边的列表长度为1，然后再对右边进行重发操作，再对这两个小列表运用mix函数进行排序，得到一个有序的小列表</span></span><br><span class="line"><span class="string">    之后一直运用mix函数进行排序，就可以完成排序。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(A) &lt; <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> A</span><br><span class="line">    mid = <span class="built_in">len</span>(A) // <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    left = fen(A[:mid])</span><br><span class="line">    right = fen(A[mid:])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> mix(left,right)</span><br><span class="line"></span><br><span class="line">a = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br><span class="line">fen(a)   <span class="comment">#建议：在此处设置断点观看变化</span></span><br><span class="line"><span class="built_in">print</span>(fen(a))</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-快速排序"><a href="#5-快速排序" class="headerlink" title="5.快速排序"></a><strong>5.快速排序</strong></h2><p><strong>原理</strong>：通过一次排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>选择一个基准元素，通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另一部分的所有数据都要小。</li>
+<li>再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</li>
+</ol>
+<p>**特点：**效率更快。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">partition</span>(<span class="params">a,left,right</span>):</span><br><span class="line">    index = left+<span class="number">1</span></span><br><span class="line">    <span class="comment">#假设left为基准值，left+1用于标记，方便交换</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(left+<span class="number">1</span>,right+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> a[i]&lt;=a[left]:</span><br><span class="line">            <span class="comment">#如果当前元素小于基准值</span></span><br><span class="line">            a[i],a[index]=a[index],a[i]</span><br><span class="line">            <span class="comment">#将比基准值小的交换到基准值后面</span></span><br><span class="line">            index+=<span class="number">1</span></span><br><span class="line">            <span class="comment">#标记交用于换到的位置</span></span><br><span class="line"></span><br><span class="line">    a[index-<span class="number">1</span>],a[left]=a[left],a[index-<span class="number">1</span>]</span><br><span class="line">    <span class="comment">#将基准值与比基准值小的最后一位交换，实现比基准值小的都在基准值前面</span></span><br><span class="line">    <span class="keyword">return</span> index-<span class="number">1</span></span><br><span class="line">    <span class="comment">#返回基准值下标</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">quickfile</span>(<span class="params">a,left,right</span>):</span><br><span class="line">    <span class="keyword">if</span> left &lt; right:</span><br><span class="line">        mid= partition(a,left,right)</span><br><span class="line">        quickfile(a,left,mid-<span class="number">1</span>)</span><br><span class="line">        <span class="comment">#基准值排好了，不动，先对左边进行递归</span></span><br><span class="line">        quickfile(a,mid+<span class="number">1</span>,right)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br><span class="line">quickfile(a,<span class="number">0</span>,<span class="number">6</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -523,7 +559,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wsj-iwakiwjlag.github.io/2024/04/20/%E7%AC%AC%E4%B8%83%E5%91%A8/">https://wsj-iwakiwjlag.github.io/2024/04/20/%E7%AC%AC%E4%B8%83%E5%91%A8/</a>
+                    <a href="https://wsj-iwakiwjlag.github.io/2024/04/24/python%E7%9A%84%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E6%95%B4%E7%90%86/">https://wsj-iwakiwjlag.github.io/2024/04/24/python%E7%9A%84%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E6%95%B4%E7%90%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -728,48 +764,12 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
-            <div class="card">
-                <a href="/2024/04/20/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%882.26-3.3%EF%BC%89/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-20
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Jie
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2024/04/20/%E6%B5%8B%E8%AF%95%E5%95%8A%E5%85%AB%E5%85%AB%E5%85%AB%E5%85%AB%E5%85%AB%E5%85%AB/">
+                <a href="/2024/04/24/python%E7%9A%84%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E6%95%B4%E7%90%86/">
                     <div class="card-image">
                         
                         
@@ -786,7 +786,45 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Jie
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/04/21/%E7%AC%AC%E5%85%AB%E5%91%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-21
                             </span>
                         <span class="publish-author">
                             
