@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-04-20
+                    2024-05-08
                 </div>
                 
 
@@ -464,44 +464,68 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h1><ol>
-<li>培养每天学英语习惯，提高英语词汇与阅读能力</li>
-<li>继续C语言的学习</li>
+                <h1 id="初版有很多知识点深奥，还没来得及整理完成。"><a href="#初版有很多知识点深奥，还没来得及整理完成。" class="headerlink" title="&#x3D;&#x3D;初版有很多知识点深奥，还没来得及整理完成。&#x3D;&#x3D;"></a><strong>&#x3D;&#x3D;初版有很多知识点深奥，还没来得及整理完成。&#x3D;&#x3D;</strong></h1><h1 id="1-指针的基本概念"><a href="#1-指针的基本概念" class="headerlink" title="1.指针的基本概念"></a>1.指针的基本概念</h1><h2 id="指针的定义："><a href="#指针的定义：" class="headerlink" title="指针的定义："></a>指针的定义：</h2><p>指针是一个变量，它存储的是另一个变量的<strong>内存地址</strong>（<strong>带类型的地址：不同的类型占的内存地址不一样：int一般占4个字节</strong>）</p>
+<p>指针与变量之间的关系：</p>
+<p>指针和变量都是存储在内存中的实体。<strong>变量存储的是数据值，而指针存储的是数据值的地址</strong>。通过指针，我们可以间接地访问和操作变量的值。</p>
+<h2 id="指针的声明与初始化"><a href="#指针的声明与初始化" class="headerlink" title="指针的声明与初始化"></a>指针的声明与初始化</h2><p>声明<code>：</code>**<code>数据类型 *名字</code>**：<code>int *a;</code></p>
+<p>初始化：<code>名字 = 地址</code>：<code>a = &amp;b</code>(其中a与b的数据类型要一致)</p>
+<p><strong>取地址运算符&amp;:是一个一元运算符，写在一个数据对象的左边，可以获取一个数据对象的</strong>首地址和<strong>所需存 储空间大小</strong>。</p>
+<p><strong>取值运算符*</strong>:</p>
+<p>取值运算符是一个一元运算符，写在一个指针的左边，可以<strong>根据指针中存储的首地址和空间大小找到目标数据对象</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n = <span class="number">123</span>;</span><br><span class="line"><span class="type">int</span>* pn = &amp;n;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%u\n&quot;</span>, pn); <span class="comment">// 打印n的首地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, *pn);<span class="comment">// 根据`pn`中的首地址与大小，找到的数据对象的值</span></span><br><span class="line">指针类型的大小：<span class="keyword">sizeof</span>(pn)</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-指针的基本操作"><a href="#2-指针的基本操作" class="headerlink" title="2.指针的基本操作"></a>2.指针的基本操作</h1><h2 id="指针的运算"><a href="#指针的运算" class="headerlink" title="指针的运算"></a>指针的运算</h2><ol>
+<li><p>整形与指针类型的加减</p>
+<p>作用：实现指针的移动，并未改变指针的值</p>
+<p>&#x9;＋n： 指针类型＋1后，将<strong>首地址<code>向</code>后移动了 sizeof(目标数据对象) 字 节</strong>。</p>
+<p>&#x9;-n：指针类型-1后，将<strong>首地址向<code>前</code>移动了 sizeof(目标数据对象) 字 节</strong>。</p>
+<ol>
+<li><strong>sizeof(目标数据对象)</strong> 被称作<strong>步长</strong></li>
 </ol>
-<h1 id="学习日历"><a href="#学习日历" class="headerlink" title="学习日历"></a>学习日历</h1><table>
-<thead>
-<tr>
-<th align="left">1.29</th>
-<th align="left">C语言的分支和循环语句，阅读一篇英语短文</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">1.30</td>
-<td align="left">C语言的分支与循环语句练习，逐句翻译一篇英语短文</td>
-</tr>
-<tr>
-<td align="left">1.31</td>
-<td align="left">C语言的函数，英语听力练习</td>
-</tr>
-<tr>
-<td align="left">2.1</td>
-<td align="left">C语言函数和递归（上），英语听力练习</td>
-</tr>
-<tr>
-<td align="left">2.2</td>
-<td align="left">C语言函数和递归（下），做一篇英语听力</td>
-</tr>
-<tr>
-<td align="left">2.3</td>
-<td align="left">C语言函数和递归练习，英语听力练习</td>
-</tr>
-<tr>
-<td align="left">2.4</td>
-<td align="left">做一篇英语听力和1篇英语阅读</td>
-</tr>
-</tbody></table>
-<h1 id="本周学习收获与反思"><a href="#本周学习收获与反思" class="headerlink" title="本周学习收获与反思"></a>本周学习收获与反思</h1><p>C语言和java很像，很多语法学起来轻松一些，但英语任然没什么长进，该看不懂还是看不懂</p>
-<p>要继续坚持对英语的学习，除了每日单词背诵外，尝试一些新方法加强对英语的学习。</p>
+</li>
+<li><p>同类型指针类型的<em><strong>相减</strong></em></p>
+<p>作用：<strong>计算数组元素个数</strong>：通过指向数组首元素和尾元素的指针相减，可以快速得到数组的元素个数。</p>
+<ol>
+<li>结果为两首地址的差值除以步长</li>
+</ol>
+</li>
+</ol>
+<h1 id="3-指针与数组"><a href="#3-指针与数组" class="headerlink" title="3.指针与数组"></a>3.指针与数组</h1><h3 id="1-数组名作为指针"><a href="#1-数组名作为指针" class="headerlink" title="1,数组名作为指针"></a>1,数组名作为指针</h3><p><strong>数组名可以被当作指向其第一个元素的指针。</strong></p>
+<h3 id="2-数组元素的访问"><a href="#2-数组元素的访问" class="headerlink" title="2,数组元素的访问"></a>2,数组元素的访问</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> element1 = arr[<span class="number">2</span>]; <span class="comment">// 索引访问，等同于 *(arr + 2)  </span></span><br><span class="line"><span class="type">int</span> element2 = *(ptr + <span class="number">2</span>); <span class="comment">// 指针运算访问</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-指针运算与数组"><a href="#3-指针运算与数组" class="headerlink" title="3, 指针运算与数组"></a>3, 指针运算与数组</h3><p>指针运算（如加法、减法）与数组紧密相关。例如，给指针加上一个整数n，相当于将指针向前移动n个元素（每个元素的大小由指针类型决定）。这常用于遍历数组：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> *p = arr; p &lt; arr + <span class="number">5</span>; ++p) &#123;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, *p);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-数组传递给函数"><a href="#4-数组传递给函数" class="headerlink" title="4, 数组传递给函数"></a>4, 数组传递给函数</h3><p>当数组作为参数传递给函数时，<strong>实际上传递的是指向数组第一个元素的指针</strong>。因此，在函数内部，我们无法知道数组的实际大小，但我们可以访问数组的元素：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">print_array</span><span class="params">(<span class="type">int</span> *arr, <span class="type">int</span> size)</span> &#123;  </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; ++i) &#123;  </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]); <span class="comment">// 或 printf(&quot;%d &quot;, *(arr + i));  </span></span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-多级指针指针数组"><a href="#4-多级指针指针数组" class="headerlink" title="4.多级指针指针数组"></a>4.多级指针指针数组</h1><h2 id="特别篇：指针数组与数组指针"><a href="#特别篇：指针数组与数组指针" class="headerlink" title="特别篇：指针数组与数组指针"></a>特别篇：指针数组与数组指针</h2><ul>
+<li><strong>指向数组的指针(数组指针）</strong>：通常用于表示固定大小的多维数组。例如，<code>int (*ptr)[cols]</code> 是一个<strong>指向</strong>有 <code>cols</code> 个整数的<strong>数组的指针</strong>。<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line">  </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;  </span><br><span class="line">    <span class="type">int</span> arr[<span class="number">3</span>][<span class="number">4</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;, &#123;<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>&#125;, &#123;<span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>&#125;&#125;;  </span><br><span class="line">    <span class="type">int</span> (*ptr)[<span class="number">4</span>] = arr; <span class="comment">// ptr指向一个包含4个整数的数组  </span></span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 访问数组元素  </span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;  </span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; j++) &#123;  </span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, (*ptr)[i * <span class="number">4</span> + j]); <span class="comment">// 复杂，不推荐这样使用  </span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, ptr[i][j]); <span class="comment">// 推荐使用这种方式  </span></span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>指针数组</strong>：<strong>是一个数组，其元素是指针</strong>。它可以用于存储多个指向不同类型或相同类型数据的指针。例如，<code>int *ptrs[size]</code> 是一个有 <code>size</code> 个 <code>int *</code> 类型元素的数组。<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line">  </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;  </span><br><span class="line">    <span class="type">int</span> a = <span class="number">1</span>, b = <span class="number">2</span>, c = <span class="number">3</span>;  </span><br><span class="line">    <span class="type">int</span> *ptrs[<span class="number">3</span>] = &#123;&amp;a, &amp;b, &amp;c&#125;; <span class="comment">// ptrs是一个指针数组，存储三个int指针  </span></span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 访问指针指向的值  </span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;  </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, *ptrs[i]);  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="5-指针与函数"><a href="#5-指针与函数" class="headerlink" title="5.指针与函数"></a>5.指针与函数</h1><h3 id="1-函数指针"><a href="#1-函数指针" class="headerlink" title="1. 函数指针"></a>1. 函数指针</h3><h3 id="2-指针作为函数参数"><a href="#2-指针作为函数参数" class="headerlink" title="2. 指针作为函数参数"></a>2. 指针作为函数参数</h3><p>函数可以接受指针作为参数，<strong>这使得函数能够直接访问和操作指针所指向的数据</strong>。这种能力在处理数组、字符串以及动态分配的内存时尤为重要。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line">  </span><br><span class="line"><span class="type">void</span> <span class="title function_">print_array</span><span class="params">(<span class="type">int</span> *arr, <span class="type">int</span> size)</span> &#123;  </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; ++i) &#123;  </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]); <span class="comment">// 等同于 printf(&quot;%d &quot;, *(arr + i));  </span></span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;  </span><br><span class="line">    <span class="type">int</span> arr[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;  </span><br><span class="line">    print_array(arr, <span class="number">5</span>); <span class="comment">// 传递数组名，它会被视为指向数组第一个元素的指针  </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-指针作为函数返回值"><a href="#3-指针作为函数返回值" class="headerlink" title="3. 指针作为函数返回值"></a>3. 指针作为函数返回值</h3><h3 id="4-修改函数外部的变量"><a href="#4-修改函数外部的变量" class="headerlink" title="4. 修改函数外部的变量"></a>4. 修改函数外部的变量</h3><h1 id="6-指针与字符串"><a href="#6-指针与字符串" class="headerlink" title="6.指针与字符串"></a>6.指针与字符串</h1><h3 id="字符串与字符数组"><a href="#字符串与字符数组" class="headerlink" title="字符串与字符数组"></a>字符串与字符数组</h3><p>在C语言中，字符串是以字符数组的形式存储的，并且以空字符（’\0’）作为结尾标志。例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> str[] = <span class="string">&quot;Hello, world!&quot;</span>; <span class="comment">// 字符数组初始化字符串</span></span><br><span class="line"><span class="comment">//在这个例子中，str 是一个字符数组，它包含了14个字符（包括结尾的空字符）。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-字符串名作为指针"><a href="#1-字符串名作为指针" class="headerlink" title="1.字符串名作为指针"></a>1.字符串名作为指针</h3><p>在C语言中，当你声明一个字符数组并初始化为一个字符串时，<strong>字符串名（即数组名）可以作为一个指向该字符串首字符的指针来使用</strong>。例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> str[] = <span class="string">&quot;Hello, world!&quot;</span>;  </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, str); <span class="comment">// 使用字符串名作为指针传递给printf函数</span></span><br><span class="line"><span class="comment">//在这个例子中，str 是一个指向字符串 &quot;Hello, world!&quot; 第一个字符 &#x27;H&#x27; 的指针。因此，printf 函数能够通过这个指针遍历整个字符串，直到遇到空字符。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-字符指针与字符串字面量"><a href="#2-字符指针与字符串字面量" class="headerlink" title="2.字符指针与字符串字面量"></a>2.字符指针与字符串字面量</h3><p>除了字符数组之外，字符串还可以以字符串字面量的形式出现。字<strong>符串字面量是一个常量字符数组</strong>，存储在程序的<strong>只读</strong>数据段中。当你将一个字符串字面量赋值给一个字符指针时，你实际上是在让这个指针指向字符串字面量的首字符。例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *ptr = <span class="string">&quot;Hello, world!&quot;</span>; <span class="comment">// 字符指针指向字符串字面量  </span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, ptr); <span class="comment">// 使用字符指针传递给printf函数</span></span><br><span class="line"><span class="comment">//在这个例子中，ptr 是一个字符指针，它指向了字符串字面量 &quot;Hello, world!&quot; 的首字符。注意，你不能修改通过字符指针指向的字符串字面量中的字符，因为它们是只读的。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-修改字符串"><a href="#3-修改字符串" class="headerlink" title="3.修改字符串"></a>3.修改字符串</h3><p>如果你需要修改字符串的内容，你<strong>应该使用字符数组而不是字符指针指向的字符串字面量</strong>。因为字符串字面量是只读的，尝试修改它们会导致未定义的行为（通常是程序崩溃）。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> str[] = <span class="string">&quot;Hello, world!&quot;</span>; <span class="comment">// 字符数组，可以修改  </span></span><br><span class="line">str[<span class="number">0</span>] = <span class="string">&#x27;h&#x27;</span>; <span class="comment">// 修改成功，输出将是 &quot;hello, world!&quot;  </span></span><br><span class="line">  </span><br><span class="line"><span class="type">char</span> *ptr = <span class="string">&quot;Hello, world!&quot;</span>; <span class="comment">// 字符指针指向字符串字面量，不能修改  </span></span><br><span class="line">ptr[<span class="number">0</span>] = <span class="string">&#x27;h&#x27;</span>; <span class="comment">// 尝试修改，但会导致未定义的行为（通常是程序崩溃）</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="7-动态内存分配与指向它的指针变量（不太会）"><a href="#7-动态内存分配与指向它的指针变量（不太会）" class="headerlink" title="7.**动态内存分配与指向它的指针变量（不太会）"></a>7.**动态内存分配与指向它的指针变量（不太会）</h1><h1 id="8-指针的注意事项"><a href="#8-指针的注意事项" class="headerlink" title="8.指针的注意事项"></a>8.指针的注意事项</h1><h3 id="1-空指针（NULL指针）："><a href="#1-空指针（NULL指针）：" class="headerlink" title="1.空指针（NULL指针）："></a><strong>1.空指针（NULL指针）</strong>：</h3><ul>
+<li>在声明指针变量后，如果没有初始化，它将包含一个不确定的值（垃圾值），这可能导致未定义的行为。因此，通常建议将指针初始化为<code>NULL</code>，表示它不指向任何有效的内存位置。</li>
+<li>在使用指针之前，始终检查它是否为<code>NULL</code>，以避免尝试访问无效的内存地址。</li>
+</ul>
+<h3 id="2-指针运算"><a href="#2-指针运算" class="headerlink" title="2.指针运算"></a>2.<strong>指针运算</strong></h3><ul>
+<li>指针运算（如递增、递减、加法、减法）在C语言中很常见，但必须谨慎使用。指针运算的结果必须指向有效的内存区域，否则可能导致未定义的行为。</li>
+</ul>
+<h3 id="3-指针类型"><a href="#3-指针类型" class="headerlink" title="3.指针类型"></a>3.<strong>指针类型</strong></h3><p>指针的类型决定了它所指向的内存的大小和解释方式。将一种类型的指针强制转换为另一种类型（类型转换或强制类型转换）可能会导致不可预测的结果，</p>
 
                 
             </div>
@@ -528,7 +552,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wsj-iwakiwjlag.github.io/2024/04/20/%E5%AF%92%E5%81%87%E5%81%87%E5%91%A8%E6%8A%A5%EF%BC%88%E4%B8%89%EF%BC%89/">https://wsj-iwakiwjlag.github.io/2024/04/20/%E5%AF%92%E5%81%87%E5%81%87%E5%91%A8%E6%8A%A5%EF%BC%88%E4%B8%89%EF%BC%89/</a>
+                    <a href="https://wsj-iwakiwjlag.github.io/2024/05/08/c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88%E6%A2%B3%E7%90%86%EF%BC%88%E5%88%9D%E7%89%88%EF%BC%89/">https://wsj-iwakiwjlag.github.io/2024/05/08/c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88%E6%A2%B3%E7%90%86%EF%BC%88%E5%88%9D%E7%89%88%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -733,48 +757,12 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
-            <div class="card">
-                <a href="/2024/04/20/Java%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%BA%94%E7%94%A8/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-20
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Jie
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2024/04/20/18%E5%91%A8%E5%91%A8%E6%8A%A5/">
+                <a href="/2024/05/08/c%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88%E6%A2%B3%E7%90%86%EF%BC%88%E5%88%9D%E7%89%88%EF%BC%89/">
                     <div class="card-image">
                         
                         
@@ -791,7 +779,45 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Jie
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/05/05/%E7%AC%AC%E5%8D%81%E5%91%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-05
                             </span>
                         <span class="publish-author">
                             
