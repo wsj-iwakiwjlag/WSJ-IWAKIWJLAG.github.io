@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-05-21
+                    2024-05-26
                 </div>
                 
 
@@ -464,45 +464,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>声明：此笔记为观看黑马视频后的知识点摘要，主要为了快速复习与查看</strong></p>
-<p>个人理解：</p>
-<p>在Linux我们通过用户进行操作，而用户会有它的组，这样会方便统一管理权限；我们操作文件或文件夹需要权限；通过最高管理员root可以设置用户的权限</p>
-<h1 id="root-超级管理员-介绍"><a href="#root-超级管理员-介绍" class="headerlink" title="root(超级管理员)介绍"></a>root(超级管理员)介绍</h1><p>介绍：最高管理员，拥有所有的权限</p>
-<h2 id="su-用户名-进入超级管理员模式"><a href="#su-用户名-进入超级管理员模式" class="headerlink" title="su [-] [用户名] 进入超级管理员模式"></a><code>su [-] [用户名]</code> 进入超级管理员模式</h2><p><code>-</code>： 可选，表示是否在<em>切换用户后加载环境变量</em>（后续讲解），<strong>建议带上</strong></p>
-<p><code>用户名</code>，表示要切换的用户，用户名也可以省略，<em>省略表示切换到root</em></p>
-<p><code>exit</code>：退回到上一个用户（快捷键：ctrl+d）</p>
-<p>注：</p>
-<p><strong>1.普通用户</strong>进入root用户需要<strong>输入密码</strong>，而<strong>root</strong>用户切换其他用户<strong>不需要密码</strong></p>
-<p>2.使用后一定要即使退出，不建议长期使用</p>
-<h2 id="sudo-其他命令-给普通用户临时的超级管理员权限"><a href="#sudo-其他命令-给普通用户临时的超级管理员权限" class="headerlink" title="sudo 其他命令 给普通用户临时的超级管理员权限"></a><code>sudo 其他命令</code> 给普通用户临时的超级管理员权限</h2><h3 id="sudo认证"><a href="#sudo认证" class="headerlink" title="sudo认证"></a><strong>sudo认证</strong></h3><ol>
-<li><code>su -  root</code> 进入管理员模式</li>
-<li><code>visudo</code> 通过vi编辑器，打开&#x2F;etc&#x2F;sudoers文件</li>
-<li>在文件最后一行添加：<code>用户名 ALL=(ALL)  (一个制表符)  NOPASSWD:ALL</code> 前面部分是给用户所有的权限，后半部分是不要书密码</li>
-<li>配置结束，退出root</li>
-</ol>
-<p>在我们我们配置好的用户内可以</p>
-<p><code>sudo 其他命令</code>来进行操作了</p>
-<h1 id="用户与用户组管理"><a href="#用户与用户组管理" class="headerlink" title="用户与用户组管理"></a>用户与用户组管理</h1><p><strong>统一在root模式下操作</strong></p>
-<h2 id="用户组的创建与删除"><a href="#用户组的创建与删除" class="headerlink" title="用户组的创建与删除"></a>用户组的创建与删除</h2><h3 id="创建用户组：groupadd-用户组名"><a href="#创建用户组：groupadd-用户组名" class="headerlink" title="创建用户组：groupadd 用户组名"></a>创建用户组：<code>groupadd 用户组名</code></h3><h3 id="删除用户组：groupdel-用户组名"><a href="#删除用户组：groupdel-用户组名" class="headerlink" title="删除用户组：groupdel 用户组名"></a>删除用户组：<code>groupdel 用户组名</code></h3><h2 id="查看系统又哪些用户组：getent-group"><a href="#查看系统又哪些用户组：getent-group" class="headerlink" title="查看系统又哪些用户组：getent group"></a>查看系统又哪些用户组：<code>getent group</code></h2><p>包含3份信息，组名称:组认证(显示为x):组ID</p>
-<h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><h3 id="创建用户：useradd-g-t-用户名"><a href="#创建用户：useradd-g-t-用户名" class="headerlink" title="创建用户：useradd [-g -t] 用户名"></a>创建用户：<code>useradd [-g -t] 用户名</code></h3><p><code>-g</code><strong>指定用户的组</strong>，不指定-g，会创建同名组并自动加入，指定-g需要组已经存在，如已存在同名组，必须使用-g</p>
-<p>&#x9;<code>useradd text1 -g jie -t /home.user</code>  <em>创建text1用户，属于jie组，HOME目录放在&#x2F;home.user中</em></p>
-<p><code>-d</code><strong>指定用户HOME路径</strong>，不指定，HOME目录默认在：&#x2F;home&#x2F;用户名</p>
-<h3 id="删除用户：userdel-r-用户名"><a href="#删除用户：userdel-r-用户名" class="headerlink" title="删除用户：userdel [-r] 用户名"></a>删除用户：<code>userdel [-r] 用户名</code></h3><p><code>-r</code>：删除用户时一并删除用户的HOME目录</p>
-<h2 id="查看系统有哪些用户：getent-passwd"><a href="#查看系统有哪些用户：getent-passwd" class="headerlink" title="查看系统有哪些用户：getent passwd"></a>查看系统有哪些用户：<code>getent passwd</code></h2><p>共有7份信息，分别是：</p>
-<p>用户名:密码(x):用户ID:组ID:描述信息(无用):HOME目录:执行终端(默认bash)</p>
-<h3 id="查看用户所属的组：id-用户名"><a href="#查看用户所属的组：id-用户名" class="headerlink" title="查看用户所属的组：id [用户名]"></a>查看用户所属的组：<code>id [用户名]</code></h3><h3 id="修改用户所处的组：usermod-aG-用户-用户组"><a href="#修改用户所处的组：usermod-aG-用户-用户组" class="headerlink" title="修改用户所处的组：usermod -aG 用户 用户组"></a>修改用户所处的组：<code>usermod -aG</code> <code>用户 用户组</code></h3><h1 id="查看权限控制"><a href="#查看权限控制" class="headerlink" title="查看权限控制"></a>查看权限控制</h1><h2 id="认识权限信息"><a href="#认识权限信息" class="headerlink" title="认识权限信息"></a>认识权限信息</h2><p>输入 <code>ls -l</code> 会显示：<code>drwxr-xr-x. 3 jie jie</code>格式的内容</p>
-<p>第一位<code>(d/-/l)</code>：d：文件。-：文件夹。l：软链接</p>
-<p>第2-4位&#x2F;5-7位&#x2F;8-10位：分别代表：用户，用户组，其他成员。所拥有的权限</p>
-<p><code>r</code>：读。<code>w</code>：写。<code>x</code>：执行（将文件作为程序执行)。<code>-</code>：表示没有权限</p>
-<p>jie与jie 分别代表文件所属的用户及用户组</p>
-<h1 id="修改权限控制（chmod，chown）"><a href="#修改权限控制（chmod，chown）" class="headerlink" title="修改权限控制（chmod，chown）"></a>修改权限控制（chmod，chown）</h1><h2 id="chmod：修改文件，文件夹的权限细节"><a href="#chmod：修改文件，文件夹的权限细节" class="headerlink" title="chmod：修改文件，文件夹的权限细节"></a>chmod：修改文件，文件夹的权限细节</h2><p>语法规则：<code>chmod [-R] 权限 文件或文件夹</code></p>
-<p>-R：对文件夹的全部内容应用同样的操作</p>
-<p>示例：<code>chmod -R 751 text</code> <strong>将文件夹text及文件夹内全部内容权限设置位 rwxr-x–x</strong></p>
-<p>权限751的解析：<strong>r：4，w：2，x：1</strong>。根据个部分想拥有的权限进行相加</p>
-<h2 id="chown：修改文件，文件夹的所属用户和用户组（root用户执行）"><a href="#chown：修改文件，文件夹的所属用户和用户组（root用户执行）" class="headerlink" title="chown：修改文件，文件夹的所属用户和用户组（root用户执行）"></a>chown：修改文件，文件夹的所属用户和用户组（root用户执行）</h2><p>语法规则：<code>chown [-R] [用户] [:] [用户组] 文件或文件夹</code></p>
-<p><code>-R</code>：同chmod，对文件夹全部内容应用相同规则</p>
-<p><code>:</code>：分隔用户和用户组</p>
-<p>示例：<code>chown -R jie:jie1 text</code> <strong>将text文件夹及其全部内容的所属用户修改为jie,用户组为jie1</strong></p>
+                <h1 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h1><p>跟着视频完成了一个Java项目，准备期末考试</p>
+<h1 id="学习日历"><a href="#学习日历" class="headerlink" title="学习日历"></a>学习日历</h1><table>
+<thead>
+<tr>
+<th align="left">日期</th>
+<th align="left">大纲</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5.20</td>
+<td align="left">1.成功创建窗口及背景，并实现红线的摆动与收回</td>
+</tr>
+<tr>
+<td align="left">5.21</td>
+<td align="left">整理了一下Linux关于用户和权限的基础笔记</td>
+</tr>
+<tr>
+<td align="left">5.22</td>
+<td align="left">基本上将黄金矿工游戏项目完成，还有一点点路径方面的小问题</td>
+</tr>
+<tr>
+<td align="left">5.23</td>
+<td align="left">将黄金矿工项目完善了一下，复习了Java的内部类，肝高数进度</td>
+</tr>
+<tr>
+<td align="left">5.24</td>
+<td align="left">（任务太多了，有点迷茫）随便看了一点Java与高数</td>
+</tr>
+<tr>
+<td align="left">5.25</td>
+<td align="left">（迷茫加抑郁，总结了一下任务，太多了，不想做）无</td>
+</tr>
+<tr>
+<td align="left">5.26</td>
+<td align="left">不管了，一点点做，能做多少做多少；先把一张英语试卷肯完了，又学了一点点Java</td>
+</tr>
+</tbody></table>
+<h1 id="奇怪的扩展内容"><a href="#奇怪的扩展内容" class="headerlink" title="奇怪的扩展内容"></a>奇怪的扩展内容</h1><h2 id="抑郁与焦虑后的反思"><a href="#抑郁与焦虑后的反思" class="headerlink" title="抑郁与焦虑后的反思"></a>抑郁与焦虑后的反思</h2><p>总：通过戒游戏，减少目标与包袱来增加时间与动力，去搞定繁重的期末学业任务</p>
+<p>分：初步想法：学一点，鼓励一下，继续学；将游戏与短视频戒掉，无聊就刷刷网课。</p>
 
                 
             </div>
@@ -529,7 +529,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wsj-iwakiwjlag.github.io/2024/05/21/Linux%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/">https://wsj-iwakiwjlag.github.io/2024/05/21/Linux%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</a>
+                    <a href="https://wsj-iwakiwjlag.github.io/2024/05/26/%E7%AC%AC13%E5%91%A8/">https://wsj-iwakiwjlag.github.io/2024/05/26/%E7%AC%AC13%E5%91%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -734,9 +734,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2024/05/26/%E7%AC%AC13%E5%91%A8/">
                     <div class="card-image">
@@ -754,9 +755,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -765,6 +766,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -775,7 +777,7 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/05/19/%E7%AC%AC12%E5%91%A8/">
+                <a href="/2024/05/21/Linux%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/">
                     <div class="card-image">
                         
                         
@@ -792,7 +794,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-21
                             </span>
                         <span class="publish-author">
                             
