@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-04-20
+                    2024-05-29
                 </div>
                 
 
@@ -464,61 +464,48 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="本周学习大纲"><a href="#本周学习大纲" class="headerlink" title="本周学习大纲"></a>本周学习大纲</h1><table>
-<thead>
-<tr>
-<th align="left">18</th>
-<th align="left">给博客按个主题</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">19-21</td>
-<td align="left">期末复习</td>
-</tr>
-<tr>
-<td align="left">22-24</td>
-<td align="left">其他课外学习</td>
-</tr>
-</tbody></table>
-<h1 id="本周学习日历"><a href="#本周学习日历" class="headerlink" title="本周学习日历"></a>本周学习日历</h1><table>
-<thead>
-<tr>
-<th align="left">星期一</th>
-<th align="left">给博客按了个主题</th>
-<th align="left">复习了高数的定与不定积分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">星期二</td>
-<td align="left">整理了一下java中的容易忘掉的地方</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">星期三</td>
-<td align="left">将python所有内容复习了一遍</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">星期四</td>
-<td align="left">复习了线代一本书</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">星期五</td>
-<td align="left">将jupyter notebook中遇到的问题解决，可以正常使用</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">星期六</td>
-<td align="left">了解python爬虫基本结构，与HTML网页结构</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">星期天</td>
-<td align="left">参加团建。</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
+                <p>注：此笔记是观看完java黄金矿工项目实战后的笔记，</p>
+<h1 id="1-窗口的设置（JFrame）"><a href="#1-窗口的设置（JFrame）" class="headerlink" title="1.窗口的设置（JFrame）"></a>1.窗口的设置（JFrame）</h1><p>JFrame是 Java Swing GUI（图形用户界面）库中的一个核心类。用于<strong>创建主窗口</strong>或顶级容器。</p>
+<p>以下是一个简单的示例，演示了如何使用 <code>JFrame</code> 创建一个基本的窗口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> javax.swing.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">window</span> <span class="keyword">extends</span> <span class="title class_">JFrame</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">launch</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//设置窗口可见</span></span><br><span class="line">        <span class="built_in">this</span>.setVisible(<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">//设置窗口大小</span></span><br><span class="line">        <span class="built_in">this</span>.setSize(<span class="number">768</span>, <span class="number">1000</span>);</span><br><span class="line">        <span class="comment">//设置窗口位置位于屏幕中心</span></span><br><span class="line">        <span class="built_in">this</span>.setLocationRelativeTo(<span class="literal">null</span>);</span><br><span class="line">        <span class="comment">//设置窗口标题</span></span><br><span class="line">        <span class="built_in">this</span>.setTitle(<span class="string">&quot;尚学堂黄金矿工&quot;</span>);</span><br><span class="line">        <span class="comment">// 设置窗口关闭时的操作（默认为 DO_NOTHING_ON_CLOSE）</span></span><br><span class="line">        <span class="built_in">this</span>.setDefaultCloseOperation(EXIT_ON_CLOSE);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//new出window类，调用launch()方法</span></span><br><span class="line">        <span class="type">window</span> <span class="variable">w</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">window</span>();</span><br><span class="line">        w.launch();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-图片的导入"><a href="#2-图片的导入" class="headerlink" title="2.图片的导入"></a>2.图片的导入</h1><p>注：此处算是一个速成，图片导入没有检验不太严谨，还要其他一些不严谨的地方，具体先跳过，能用就行，以后会补充。</p>
+<h2 id="paint函数的drawImage，paintLine"><a href="#paint函数的drawImage，paintLine" class="headerlink" title="paint函数的drawImage，paintLine"></a>paint函数的drawImage，paintLine</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">window</span> <span class="keyword">extends</span> <span class="title class_">JFrame</span> &#123;</span><br><span class="line"><span class="comment">//绘制红线的绘制方法</span></span><br><span class="line"> <span class="keyword">void</span> <span class="title function_">paintSelf</span><span class="params">(Graphics g)</span>&#123;</span><br><span class="line"><span class="comment">//颜色为红色</span></span><br><span class="line">g.setColor(Color.red)</span><br><span class="line"><span class="comment">//此处的x,y,endx,endy;分别为起始的xy轴坐标</span></span><br><span class="line">g.drawLine(x,y,endx,endy)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//载入背景</span></span><br><span class="line"><span class="type">Image</span> <span class="variable">bg</span> <span class="operator">=</span> Toolkit.getDefaultToolkit().getImage(<span class="string">&quot;图片的地址&quot;</span>);</span><br><span class="line"><span class="comment">//绘制方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span>&#123;</span><br><span class="line">		<span class="comment">//drawImage的参数分别是：图片路径(image)类型；起；始坐标；接收图像加载进度的通知（不必须），null为不接收</span></span><br><span class="line">        g.drawImage(bg,<span class="number">0</span>,<span class="number">0</span>,<span class="literal">null</span>);</span><br><span class="line">		paintself(g)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="双缓存技术"><a href="#双缓存技术" class="headerlink" title="双缓存技术"></a>双缓存技术</h2><p>即：创建一个画布，将所有东西加载到画布上面，然后将画布传入窗体中，解决闪动问题。</p>
+<p>我使用了 <code>Graphics</code> 而不是 <code>Graphics2D</code>，因为 <code>Graphics2D</code> 提供了更多的绘制功能，而我暂时不需要用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//此处代码是接着上面的代码写的</span></span><br><span class="line">Image offScreenImage;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span>&#123;</span><br><span class="line">        <span class="comment">//画布的大小</span></span><br><span class="line">        offScreenImage =<span class="built_in">this</span>.createImage(<span class="number">768</span>,<span class="number">1000</span>);</span><br><span class="line">        <span class="comment">//给画布添加一个画笔</span></span><br><span class="line">        <span class="type">Graphics</span> <span class="variable">glImage</span> <span class="operator">=</span> offScreenImage.getGraphics();</span><br><span class="line">        <span class="comment">//调用画笔向画布上绘制东西</span></span><br><span class="line">        paintSelf(glImage);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>解析</strong>：</p>
+<p><strong><code>Image offScreenImage;</code></strong></p>
+<ul>
+<li><strong>知识点</strong>：<code>Image</code> 是Java AWT库中的一个类，用于表示图像。在这里，它被用作一个“离屏缓冲区”，即一个不在屏幕上直接显示的图像缓冲区。</li>
+<li><strong>用途</strong>：通常，离屏缓冲区用于提高图形渲染的性能。你可以在这个缓冲区上进行复杂的绘制操作，然后再一次性将这个缓冲区的内容绘制到屏幕上，而不是在屏幕上进行频繁的绘制操作。</li>
+</ul>
+<p><strong><code>public void paint(Graphics g)</code></strong></p>
+<ul>
+<li><strong>知识点</strong>：<code>paint</code> 方法是Java AWT和Swing组件中用于绘制组件内容的方法。当组件需要被重绘时（例如，首次显示、组件大小改变或调用了 <code>repaint</code> 方法），这个方法就会被调用。</li>
+</ul>
+<p><strong><code>offScreenImage =this.createImage(768,1000);</code></strong></p>
+<ul>
+<li><strong>知识点</strong>：<code>createImage</code> 是Java AWT组件的一个方法，用于创建一个新的离屏图像。这里，它创建了一个宽度为768像素、高度为1000像素的离屏图像。</li>
+</ul>
+<p><strong><code>Graphics glImage = offScreenImage.getGraphics();</code></strong></p>
+<ul>
+<li><strong>知识点</strong>：<code>getGraphics</code> 方法是从 <code>Image</code> 对象中获取 <code>Graphics</code> 对象的方法，这个 <code>Graphics</code> 对象可以用于在图像上进行绘制。</li>
+</ul>
+<h1 id="鼠标监听事件"><a href="#鼠标监听事件" class="headerlink" title="鼠标监听事件"></a>鼠标监听事件</h1><p>作用：获取鼠标的状态，通过获得不同的状态，进而进行不同的操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">addMouseListener(<span class="keyword">new</span> <span class="title class_">MouseAdapter</span>() &#123;  </span><br><span class="line">    <span class="meta">@Override</span>  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">mouseClicked</span><span class="params">(MouseEvent e)</span> &#123;  </span><br><span class="line">        <span class="comment">// 调用超类（MouseAdapter）的mouseClicked方法，但在这个例子中，它什么也不做  </span></span><br><span class="line">        <span class="built_in">super</span>.mouseClicked(e);  </span><br><span class="line"></span><br><span class="line">        <span class="comment">// e.getButton()检查点击的是哪个鼠标按钮  </span></span><br><span class="line">        <span class="comment">// 1：左键，2：滚轮，3：右键 </span></span><br><span class="line">        <span class="keyword">if</span> (e.getButton() == <span class="number">1</span>) &#123;  </span><br><span class="line">            <span class="comment">// 如果点击的是鼠标左键，打印 &quot;1&quot;  </span></span><br><span class="line">            System.out.println(<span class="string">&quot;1&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="增强for循环"><a href="#增强for循环" class="headerlink" title="增强for循环"></a>增强for循环</h1><p>在创建金块对象时，创建一个Object类型的集合，使用增强for循环来遍历提取金块元素</p>
+<p><strong>作用及优势：简洁，容易读，类型安全</strong></p>
+<p>增强for循环（Enhanced For Loop），也称为”for-each”循环，是Java 5及以后版本引入的一种简化数组和集合遍历的语法。它允许你更简洁地遍历数组或集合中的元素，而无需使用传统的基于索引的for循环。</p>
+<h3 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] numbers = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 使用增强for循环遍历数组  </span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> number : numbers) &#123;  </span><br><span class="line">    System.out.println(number);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>number</code> 是数组 <code>numbers</code> 中当前遍历到的元素。<code>for (int number : numbers)</code> 这种语法告诉Java我们想要遍历 <code>numbers</code> 数组中的每一个元素，并且每次迭代时都将当前元素的值赋给 <code>number</code> 变量。</p>
+<h3 id="遍历集合"><a href="#遍历集合" class="headerlink" title="遍历集合"></a>遍历集合</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;  </span><br><span class="line"><span class="keyword">import</span> java.util.List;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">EnhancedForLoopExample</span> &#123;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;  </span><br><span class="line">        List&lt;String&gt; names = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();  </span><br><span class="line">        names.add(<span class="string">&quot;Alice&quot;</span>);  </span><br><span class="line">        names.add(<span class="string">&quot;Bob&quot;</span>);  </span><br><span class="line">        names.add(<span class="string">&quot;Charlie&quot;</span>);  </span><br><span class="line">  </span><br><span class="line">        <span class="comment">// 使用增强for循环遍历集合  </span></span><br><span class="line">        <span class="keyword">for</span> (String name : names) &#123;  </span><br><span class="line">            System.out.println(name);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>name</code> 是 <code>names</code> 列表中当前遍历到的字符串。<code>for (String name : names)</code> 语法告诉Java我们想要遍历 <code>names</code> 列表中的每一个元素，并且每次迭代时都将当前元素的值赋给 <code>name</code> 变量。</p>
 
                 
             </div>
@@ -545,7 +532,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wsj-iwakiwjlag.github.io/2024/04/20/17%E5%91%A8%E5%91%A8%E6%8A%A5/">https://wsj-iwakiwjlag.github.io/2024/04/20/17%E5%91%A8%E5%91%A8%E6%8A%A5/</a>
+                    <a href="https://wsj-iwakiwjlag.github.io/2024/05/29/%E9%BB%84%E9%87%91%E7%9F%BF%E5%B7%A5%E9%A1%B9%E7%9B%AE%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/">https://wsj-iwakiwjlag.github.io/2024/05/29/%E9%BB%84%E9%87%91%E7%9F%BF%E5%B7%A5%E9%A1%B9%E7%9B%AE%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -750,48 +737,12 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
-            <div class="card">
-                <a href="/2024/04/20/HTML/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-20
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Jie
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2024/04/20/16%E5%91%A8%E5%91%A8%E6%8A%A51/">
+                <a href="/2024/05/29/%E9%BB%84%E9%87%91%E7%9F%BF%E5%B7%A5%E9%A1%B9%E7%9B%AE%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/">
                     <div class="card-image">
                         
                         
@@ -808,7 +759,45 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Jie
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/05/26/%E7%AC%AC13%E5%91%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-26
                             </span>
                         <span class="publish-author">
                             
