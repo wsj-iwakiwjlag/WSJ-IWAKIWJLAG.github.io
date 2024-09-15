@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-04-20
+                    2024-09-15
                 </div>
                 
 
@@ -464,39 +464,41 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h1><p>这周主要学习了汽车道路行驶基本技巧</p>
-<h1 id="学习日历"><a href="#学习日历" class="headerlink" title="学习日历"></a>学习日历</h1><table>
-<thead>
-<tr>
-<th align="left">2.12</th>
-<th align="left">做了1篇英语阅读和听力</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">2.13</td>
-<td align="left">背单词，学车（科目三）</td>
-</tr>
-<tr>
-<td align="left">2.14</td>
-<td align="left">学车</td>
-</tr>
-<tr>
-<td align="left">2.15</td>
-<td align="left">学车</td>
-</tr>
-<tr>
-<td align="left">2.16</td>
-<td align="left">学车</td>
-</tr>
-<tr>
-<td align="left">2.17</td>
-<td align="left">学车</td>
-</tr>
-<tr>
-<td align="left">2.18</td>
-<td align="left">学车</td>
-</tr>
-</tbody></table>
+                <h1 id="微信开发者工具简介"><a href="#微信开发者工具简介" class="headerlink" title="微信开发者工具简介"></a>微信开发者工具简介</h1><p>微信开发者工具是由腾讯公司为了支持微信小程序、公众号等应用的开发而设计和开发的。这是一个集成了多种功能的开发工具集，旨在帮助开发者快速构建、测试和发布微信相关的应用。</p>
+<h1 id="创建一个微信开发项目"><a href="#创建一个微信开发项目" class="headerlink" title="创建一个微信开发项目"></a>创建一个微信开发项目</h1><ol>
+<li><p>浏览器打开<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/">https://mp.weixin.qq.com/</a> 注册小程序开发账号，主体类型选择个人，其他跟着步骤走就可以</p>
+<ol>
+<li>登录账号，点击管理，开发管理，在开发设置下，找到开发者ID，复制AppID（很重要）</li>
+</ol>
+</li>
+<li><p>在浏览器打开<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html">下载 &#x2F; 稳定版更新日志 (qq.com)</a>下载稳定版的开发者工具</p>
+</li>
+<li><p>登录开发者工具，创建自己需要的项目。</p>
+</li>
+</ol>
+<h1 id="小程序学习经验"><a href="#小程序学习经验" class="headerlink" title="小程序学习经验"></a>小程序学习经验</h1><p>微信小程序和web网页开发很像(wxml类比html;wxss类是css)，首先就是要认清目录结构。</p>
+<h2 id="基本目录结构"><a href="#基本目录结构" class="headerlink" title="基本目录结构"></a>基本目录结构</h2><ol>
+<li><p>**<code>pages</code>**：存放所有页面的文件夹，每个页面文件夹内包含四个文件，分别是</p>
+<ol>
+<li><code>*.wxml</code> - 页面结构文件，类似于HTML。</li>
+<li><code>*.wxss</code> - 页面样式文件，类似于CSS，但微信小程序对其进行了扩充。</li>
+<li><code>*.js</code> - 页面的逻辑文件，处理用户输入、网络请求等逻辑。</li>
+<li><code>*.json</code> - 页面配置文件，配置当前页面的窗口表现、设置导航条标题、配置页面的路径等。</li>
+</ol>
+</li>
+<li><p><strong><code>app.js</code></strong> - 小程序逻辑层的入口文件，用于定义全局的数据和全局的函数等。</p>
+</li>
+<li><p><strong><code>app.json</code></strong> - 小程序的全局配置文件，用来对微信小程序进行全局配置，决定页面文件的路径、窗口表现、设置网络超时时间、设置默认标题等。</p>
+</li>
+<li><p><strong><code>project.config.json</code></strong> - 项目配置文件，记录项目的一些信息，如<code>appid</code>、项目名、编译选项等。</p>
+</li>
+<li><p><strong><code>app.wxss</code></strong> - 小程序的全局样式文件，定义整个小程序的公共样式。</p>
+</li>
+<li><p><strong><code>sitemap.json</code></strong> - 用于配置小程序及其页面是否允许被微信索引。</p>
+</li>
+</ol>
+<h1 id="学习推荐"><a href="#学习推荐" class="headerlink" title="学习推荐"></a>学习推荐</h1><p>有耐心的可以看官方的开发文档：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E4%BB%8B">developers.weixin.qq.com&#x2F;miniprogram&#x2F;dev&#x2F;framework&#x2F;quickstart&#x2F;</a></p>
+<p>没耐心可以看黑马的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1834y1676P?p=1&vd_source=2249fef20827659f5979e0f3b50971f6">Day1-00.学习目标_哔哩哔哩_bilibili</a>‘；前4天就的课程就能带你快速了解小程序的开发流程，最后还有一个基于uni-app项目开发实战，非常有趣。</p>
 
                 
             </div>
@@ -523,7 +525,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wsj-iwakiwjlag.github.io/2024/04/20/%E5%AF%92%E5%81%87%E5%81%87%E5%91%A8%E6%8A%A5%EF%BC%88%E5%9B%9B%EF%BC%89/">https://wsj-iwakiwjlag.github.io/2024/04/20/%E5%AF%92%E5%81%87%E5%81%87%E5%91%A8%E6%8A%A5%EF%BC%88%E5%9B%9B%EF%BC%89/</a>
+                    <a href="https://wsj-iwakiwjlag.github.io/2024/09/15/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/">https://wsj-iwakiwjlag.github.io/2024/09/15/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -728,48 +730,12 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
-            <div class="card">
-                <a href="/2024/04/20/%E5%AF%92%E5%81%87%E5%91%A8%E6%8A%A5%EF%BC%88%E4%B8%80%EF%BC%89%5B1.15-1.21%5D/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-20
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Jie
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2024/04/20/Java%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%BA%94%E7%94%A8/">
+                <a href="/2024/09/15/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/">
                     <div class="card-image">
                         
                         
@@ -786,7 +752,45 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Jie
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/09/15/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%889.9-9.15%EF%BC%89/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-15
                             </span>
                         <span class="publish-author">
                             
